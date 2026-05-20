@@ -1,0 +1,18 @@
+# confidence interval for mean for the puls rate2 after the exercise for the people whose weight is 60-100
+#Data
+return<-c(176,73,88,141,150,88,71,67,146,86,76,96,59,79,168,92,125,168,104,140,58,84,68,90,67,80,60,76,68,89,84,65,67,74,110,126,56,82,136,90,74,80,150,83,73,155,NA,136,60,72,68,140,72,131,132,80,120,144,64,120,136,120,168,84,64,68)
+# Test for  normality
+shapiro.test(return)
+#Construct the conf.int
+t.test(return,conf.level=0.95)
+#Hypothesis testing: H0:mu<=90 against Ha:mu>90
+t.test(return,alternative="greater", mu=90)
+# confidence interval for mean for the cholesterol levels on the second day after heart attack
+#Data
+return<-c(270,236,210,142,280,272,160,220,226,242,186,266,206,318,294,282,234,224,276,282,360,310,280,278,288,288,244,236)
+# Test for  normality
+shapiro.test(return)
+#Construct the conf.int
+t.test(return,conf.level=0.99)
+#Hypothesis testing: H0:mu<=230 against Ha:mu>230
+t.test(return,alternative="greater", mu=230, conf.int=0.99)
